@@ -1,0 +1,48 @@
+﻿◀Github▶
+
+* push 전에는 pull이있다.
+	> pull은 업로드되어있는것을 갖고옴
+	> push는 내 로컬에 있는걸 업로드함
+
+<github 기초>
+1. https://gitforwindows.org/ 에서 다운로드(윈도우의 경우)
+2. 설치 및 실행
+3. github에 업로드할 로컬폴더 생성
+4. 폴더 들어간 후 오른클릭 > Git Bash Here 클릭
+5. git init >> 해당 폴더 안에 .git이라는 폴더 생김(안보이는경우 숨김폴더 해제하기)
+6. git remote add origin 업로드하려고하는폴더URL기입  >> 아무것도 안떠야 정상
+
+<내 로컬에 있는거 업로드하기>
+1. git status >> 현재 내 로컬폴더와 깃허브 폴더의 상태비교
+	>> 깃허브에는 없는데 여기엔는 있다 또는 수정되었다 같은거 나옴
+2. git add . >>여기서 .은 모든 파일을 트래킹 하겠다는 명령어
+3. git commit -m "쓰고싶은말" >> 그럼 github에 있는 commit에 쓰고싶은말 이라고 적혀져서 올라감
+4. git push origin master >> 업로드를 진짜 진행
+	>>로그인을 해야할수도 있으니, 그럴경우 github 아이디와 비밀번호를 로그인 하면 됌
+	>> 성공시, 성공했다는 메세지와 함께 깃허브 내에 해당 파일이 업로드되어있음
+
+<다른사람의 git 가져오기>
+1. 다른사람의 git을 저장하려는 새로운 폴더 생성
+2. 다른 사람의 git url을 복사해놓기 ex) https://github.com/memoming/memoming_gitTest
+3. <github 기초>의 5,6번 실행
+4. git pull origin master >> 그 사람의 git내용을 갖고옴 (로그인불필요)
+5. 지정해놨던 폴더로 들어가면 다른사람의 git 파일 다운로드 성공된 모습을 볼 수 있음
+
+<내 로컬에 있는 수정된 파일 재업로드>
+	> 한번 init과 remmote add origin을 한 경우, 반복 불필요
+1. git status >> 수정된 파일이 있다는 문구 출력
+2. git add .
+3. git commit -m "second commit" >> commit 부분에 second commit이라는 문구가 들어감
+4. git push origin master >> 수정된 파일 업로드 완료
+
+	>> 해당 파일버전의 이전버전은 오른쪽 상단에 있는 History에서 볼 수 있음
+
+<github내에서 바로 수정>
+ 1. 오른쪽 상단 연필아이콘 클릭 후 수정 및 저장
+
+<github에 업로드 되어있는게 내 로컬에 있는것보다 최신버전일경우 다운방법>
+1. 해당 파일이 있는 폴더 오른클릭 후 git hub Bash 선택
+2. git pull origin master >> 수정된 사항을 다운로드 받을 수 있음
+3. 받은 파일을 열어서 확인해보면, github에 업로드 되어있는 파일을 다운받은 모습을 볼 수 있음
+
+
